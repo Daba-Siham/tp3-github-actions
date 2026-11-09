@@ -30,3 +30,6 @@ jobs:
           echo "Commit : $GITHUB_SHA"
           echo "Événement : $GITHUB_EVENT_NAME"
 
+      - name: Tester une erreur
+        run: exit 1
+
