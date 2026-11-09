@@ -24,7 +24,7 @@ jobs:
       - name: liste des fichiers 
         run: ls -la
 
-       - name: Informations Git
+      - name: Informations Git
         run: |
           echo "Branche : $GITHUB_REF_NAME"
           echo "Commit : $GITHUB_SHA"
