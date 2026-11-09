@@ -1,0 +1,25 @@
+name: CI - Tests Python
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  tests: 
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dépendances
+        run: pip install -r requirements-dev.txt
+
+      - name: Exécuter les tests et mesurer la couverture
+        run: python -m pytest -v --cov=app --cov-report=term-missing
