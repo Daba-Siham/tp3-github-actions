@@ -14,3 +14,14 @@ jobs:
     steps:
       - name: Afficher un message
         run: echo "Hello from GitHub Actions"
+
+      - name: Vérifier Python
+        run: python --version
+
+      - name: Le répertoire courant
+        run: pwd
+
+      - name: liste des fichiers 
+        run: ls -la
+
+
