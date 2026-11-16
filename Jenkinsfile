@@ -19,7 +19,7 @@ pipeline {
 
         stage('Installation des dependances') {
             steps {
-                bat '"C:\Users\siham\AppData\Local\Programs\Python\Python311\python.exe" -m pip install -r requirements.txt'
+                bat '"C:/Users/siham/AppData/Local/Programs/Python/Python311/python.exe" -m pip install -r requirements.txt'
             }
         }
 
